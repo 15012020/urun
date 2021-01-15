@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Hesaplama</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/input.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/main.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/select2.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+	<script src="assets/js/validation.js"></script>
+	<script src="assets/js/select2.min.js"></script>
+</head>
+<script>
+	$(document).ready(function () {
+		$('.js-example-basic-single').select2();
+	});
+</script>
+
+<body>
+	<div class="row, input" align="center" style="margin:8px 8px 8px 8px">
+		<h2>Hesaplama</h2>
+		<div class="col-sm-3"></div>
+		<div class="col-sm-6">
+			<form name="hesaplama">
+				<label for="urunAdi">Ürün Adı</label>
+				<select class="js-example-basic-single" id="urunAdi" name="urunAdi" onchange="fiyatGetir()" style="width: 100%; box-sizing: border-box; padding: 12px 20px;   margin: 8px 0;">
+					<option value="default">ÜRÜN SEÇİNİZ</option>
+					<option value="100">ALEYNA</option>
+					<option value="101">ALEYNA BY</option>
+					<option value="102">ALEYNA BY ECO</option>
+					<option value="103">ALEYNA CT</option>
+					<option value="104">ALEYNA CT ECO</option>
+					<option value="105">ALEYNA CT SEDEF</option>
+					<option value="106">ALEYNA RK</option>
+					<option value="107">ANGEL</option>
+					<option value="108">ANGEL FOAM</option>
+					<option value="109">ANGEL FOAM KENZO</option>
+					<option value="110">ANGEL FOAM PLM</option>
+					<option value="111">ANGEL NEW DOVENA</option>
+					<option value="112">ANGEL NEW FLOWERS</option>
+					<option value="113">ANGEL NEW PARFÜM</option>
+					<option value="114">ANGEL PLUS</option>
+					<option value="115">ANTI ICE IS</option>
+					<option value="116">AZAC</option>
+					<option value="117">CAM KESME SIVISI</option>
+					<option value="118">CLEAR VISION</option>
+					<option value="119">COSMOLINE</option>
+					<option value="120">CRASH</option>
+					<option value="121">CRASH FUR</option>
+					<option value="122">CRASH EXTRA</option>
+					<option value="123">DIAMOND BLEACH</option>
+					<option value="124">DIAMOND ÇAMAŞIR SUYU (PARFÜMSÜZ)</option>
+					<option value="125">DIAMOND HEAVY</option>
+					<option value="126">DIAMOND LIQUID</option>
+					<option value="127">DIAMOND LIQUID M</option>
+					<option value="128">DIAMOND LIQUID WHITE</option>
+					<option value="129">DIAMOND LIQUID COLOUR</option>
+					<option value="130">DOLPHIN</option>
+					<option value="131">DRAIN</option>
+					<option value="132">ELECTRA</option>
+					<option value="133">ELECTRA CARD</option>
+					<option value="134">ELECTRA CARD AEROSOL</option>
+					<option value="135">ELECTRA PROTECT AEROSOL</option>
+					<option value="136">ELECTRA X</option>
+					<option value="137">EXPRESS CLEAN MDC</option>
+					<option value="138">EXPRES CLEAN MDC AEROSOL</option>
+					<option value="139">EXPRES CLEAN AEROSOL</option>
+					<option value="140">EXTRA GLASS</option>
+					<option value="141">FRESH AIR DREAM</option>
+					<option value="142">FRESH AIR LAVANTA</option>
+					<option value="143">FRESH AIR LEMON</option>
+					<option value="144">FRESH AIR SÜMBÜL</option>
+					<option value="145">FRESH AIR YASEMİN</option>
+					<option value="146">FRESH DRAIN</option>
+					<option value="147">GLAZE OFF</option>
+					<option value="148">GLUE REMOVER</option>
+					<option value="149">GLUREM 820</option>
+					<option value="150">GLUREM 822,5</option>
+					<option value="151">GREASENTOL NEW</option>
+					<option value="152">GREEN STAR</option>
+					<option value="153">KÖPÜK KESİCİ</option>
+					<option value="154">KALIP AYIRICI SILIKON SPREYI AEROSOL</option>
+					<option value="155">LIGHT</option>
+					<option value="156">LYBRABRITE</option>
+					<option value="157">LYBRABRITE NEW (108)</option>
+					<option value="158">LYBRABRITE X</option>
+					<option value="159">LYBRAMATIC</option>
+					<option value="160">LYBRAMATIC NEW</option>
+					<option value="161">MACROCLEAN</option>
+					<option value="162">METALIC</option>
+					<option value="163">MICRODRAIN</option>
+					<option value="164">MICROTERM LP</option>
+					<option value="165">NATUREL</option>
+					<option value="166">ODA PARFUMU RENEW</option>
+					<option value="167">ODA PARFUMU FLOWER</option>
+					<option value="168">ODA PARFUMU SOFT</option>
+					<option value="169">PICKL'OX</option>
+					<option value="170">PINK LIGHT</option>
+					<option value="171">PINK LIGHT PLUS</option>
+					<option value="172">RABBIT</option>
+					<option value="173">RABBIT CREAM</option>
+					<option value="174">RABBIT CREAM PV</option>
+					<option value="175">RABBIT JEL</option>
+					<option value="176">REVENGER A</option>
+					<option value="177">RUSTER</option>
+					<option value="178">RUSTER AEROSOL</option>
+					<option value="179">RUSTFREE</option>
+					<option value="180">SAFE CLEAN</option>
+					<option value="181">SAFE CLEAN BATH</option>
+					<option value="182">SILICON ALC</option>
+					<option value="183">SILICON ALC-S</option>
+					<option value="184">SIVI GRESS AEROSOL</option>
+					<option value="185">SPRING</option>
+					<option value="186">SPRING FF</option>
+					<option value="187">SUMMER DAVIDOFF</option>
+					<option value="188">SUMMER DESTINA</option>
+					<option value="189">SUMMER DOVE</option>
+					<option value="190">SUMMER ROYAL</option>
+					<option value="191">SUMMER COLOGNE</option>
+					<option value="192">SUMMER BANANA</option>
+					<option value="193">SUMMER BIG BABOL</option>
+					<option value="194">SUMMER KENZO</option>
+					<option value="195">SUMMER BURBERRY</option>
+					<option value="196">SUMMER GLORY</option>
+					<option value="197">SUMMER LIME</option>
+					<option value="198">SUMMER ROCHETTA</option>
+					<option value="199">TARAWAY</option>
+					<option value="200">TARAWAY FOAM</option>
+					<option value="201">TECHNO BRIGHT</option>
+					<option value="202">TEHNO BRIGHT POWDER</option>
+					<option value="203">TECHNO CAR</option>
+					<option value="204">TECHNO CHIP OFF</option>
+					<option value="205">TECHNO FLOTT</option>
+					<option value="206">TECHNO FLOTT NEW</option>
+					<option value="207">TECHNO FLOTT EXTRA</option>
+					<option value="208">TECHNO FLOTT ULTRA</option>
+					<option value="209">TECHNO FOAM</option>
+					<option value="210">TECHNO FOAM FLASH</option>
+					<option value="211">TECHNO FUGE</option>
+					<option value="212">TECHNO GZ JEL</option>
+					<option value="213">TECHNO GZ JEL PLUS</option>
+					<option value="214">TECHNO GZ JEL READY PARFUM</option>
+					<option value="215">TECHNO INK SOL</option>
+					<option value="216">TECHNO MATIC LF</option>
+					<option value="217">TECHNO MEG</option>
+					<option value="218">TECHNO MET</option>
+					<option value="219">TECHNO MET FF</option>
+					<option value="220">TECHNO MIN</option>
+					<option value="221">TECHNO MIN FOAM</option>
+					<option value="222">TECHNO MOLD D4</option>
+					<option value="223">TECHNO MOLD D4-G</option>
+					<option value="224">TECHNO NX</option>
+					<option value="225">TECHNO NX 860 ML</option>
+					<option value="226">TECHNO OTOMAT</option>
+					<option value="227">TECHNO PAINT AB</option>
+					<option value="228">TECHNO PAINT DIP A WINTER</option>
+					<option value="229">TECHNO POL</option>
+					<option value="230">TECHNO SERPANTIN</option>
+					<option value="231">TECHNO SOL</option>
+					<option value="232">TECHNO SOLEX</option>
+					<option value="233">TECHNO SOL MRY</option>
+					<option value="234">TECHNO SOL FNA</option>
+					<option value="235">TECHNO STAIN</option>
+					<option value="236">TECHNO STAIN HB</option>
+					<option value="237">TECHNO STAIN CC</option>
+					<option value="238">TECHNO STAIN GM</option>
+					<option value="239">TECHNO STAIN SP</option>
+					<option value="240">TECHNO STAIN SY</option>
+					<option value="241">TECHNO WTP 60</option>
+					<option value="242">UNI GLASS</option>
+					<option value="243">UNI GRAIN</option>
+					<option value="244">UNI KREM TEMİZLEYİCİ</option>
+					<option value="245">UNI LIGHT</option>
+					<option value="246">UNI LIGHT DESTİNA</option>
+					<option value="247">UNI LIGHT FRESH</option>
+					<option value="248">UNI LIGHT OKYANUS</option>
+					<option value="249">UNI LIGHT PLUSS</option>
+					<option value="250">UNI LIGHT SABUN</option>
+					<option value="251">UNI LIGT OTOMAT</option>
+					<option value="252">UNI LIGT OTOMAT (LAVANTA)</option>
+					<option value="253">UNI LIGHT OTOMAT SABUN KOKULU</option>
+					<option value="254">UNI SHINE</option>
+					<option value="255">UNI SHINE(KOKUSUZ)</option>
+					<option value="256">UNI SHINE NEW</option>
+					<option value="257">UNI SHINE FLORAL</option>
+					<option value="258">UNI SHINE PARFÜM</option>
+					<option value="259">UNI SHINE EXTRA</option>
+					<option value="260">UNI SOFT</option>
+					<option value="261">UNIVERSAL CLEANER</option>
+					<option value="262">UNI SYSTEM CLEANER</option>
+					<option value="263">VIZON</option>
+					<option value="264">WOODCARE</option>
+					<option value="265">YÜKSEK PERFORMANS YAĞLAYICI</option>
+					<option value="266">YÜKSEK PERFORMANS GRESİ HV</option>
+					<option value="267">UNI MICROAIR</option>
+					<option value="268">UNI MICROAIR (KOKUSUZ)</option>
+					<option value="269">UNI MICROHAND</option>
+					<option value="270">UNI MICROHAND HL</option>
+					<option value="271">UNI MICROHAND HR</option>
+					<option value="272">UNI MICROHAND 625 FF</option>
+					<option value="273">UNI MICROTERM FG 115 SP</option>
+					<option value="274">UNI MICROTERM FG 115 X</option>
+					<option value="275">UNI MICROTERM FG 119</option>
+					<option value="276">UNI MICROTERM FG 1350 F</option>
+					<option value="277">UNI MICROTERM FG 139 C</option>
+					<option value="278">UNI MICROTERM FG 1390 C</option>
+					<option value="279">UNI MICROTERM FG 219 X</option>
+					<option value="280">UNI MICROTERM FG 2190</option>
+					<option value="281">UNI MICROTERM FG 229 KY PX</option>
+					<option value="282">UNI MICROTERM FG 325 A</option>
+					<option value="283">UNI MICROTERM FG 325 C</option>
+					<option value="284">UNI MICROTERM FG 325 Q</option>
+					<option value="285">UNI MICROTERM FG GL</option>
+					<option value="286">UNI MICROTERM FG F2</option>
+					<option value="287">SPOTLESS KİREÇ ÇÖZÜCÜ</option>
+					<option value="288">SPOTLESS DEZ. GENEL TEM.(PARFÜMLÜ)</option>
+					<option value="289">SPOTLESS DEZ. GENEL TEM. (PARFÜMSUZ)</option>
+					<option value="290">SPOTLESS DEZENFEKTANLI KÖPÜK SABUN</option>
+					<option value="291">SPOTLESS DEZ. SIVI SABUN (PARFÜMLÜ)</option>
+					<option value="292">SPOTLESS DUŞ JELİ</option>
+					<option value="293">SPOTLESS GENEL TEMİZLİK ÇİÇEK</option>
+					<option value="294">SPOTLESS WC TEMIZLEYICI R6</option>
+					<option value="295">SPOTLESS SERAMİK FAYANS TEMİZLEYCİ</option>
+					<option value="296">SPOTLESS SERAMİK FAYANS TEMİZLEYCİ 800 ML</option>
+					<option value="297">SPOTLESS ŞAMPUAN</option>
+					<option value="298">SPOTLESS TUVALET BANYO TEMİZLEYİCİ</option>
+					<option value="299">SPOTLESS TUVALET BANYO TEMİZLEYİCİ 800 ML</option>
+					<option value="300">SPOTLESS ULTRA YOĞUN ÇAMAŞIR SUYU (PARFÜMSÜZ)</option>
+					<option value="301">SPOTLESS ULTRA YOĞUN ÇAMAŞIR SUYU (PARFÜMLÜ)</option>
+					<option value="302">SPOTLESS ULTRA YOĞUN ÇAMAŞIR SUYU (PARFÜMLÜ) 800 ML</option>
+					<option value="303">SPOTLESS YAĞ ÇÖZÜCÜ</option>
+					<option value="304">SPOTLESS YAĞ ÇÖZÜCÜ 860 ML</option>
+					<option value="305">SPICK&SPAN FIRÇASIZ OTO YIKAMA ŞAMPUANI</option>
+					<option value="306">SPICK&SPAN FIRÇALI OTO YIKAMA ŞAMPUANI</option>
+					<option value="307">SPICK&SPAN JANT TEMİZLEYİCİ VE PARLATICI</option>
+					<option value="308">SPICK&SPAN LASTİK TEMİZLEYİCİ VE PARLATICI</option>
+					<option value="309">SPICK&SPAN OTO BOYA KORUMA VE PARLATMA MADDESİ</option>
+					<option value="310">SPICK&SPAN TORPİDO TEMİZLEYİCİ VE PARLATICI</option>
+				</select>
+				<br>
+				<br>
+				<label for="listeFiyat">Liste Fiyatı</label>
+				<input type="text" id="listeFiyat" name="listeFiyat" placeholder="Liste Fiyatı"><br>
+				<label for="satisFiyat">Satış Fiyatı</label>
+				<input type="text" id="satisFiyat" name="satisFiyat" placeholder="Satış Fiyatı"><br>
+				<label for="agirlik">Tonaj (KG)</label>
+				<input type="text" id="agirlik" name="agirlik" placeholder="Tonaj (KG)"><br>
+				<label for="tahsilat">Tahsilat Süresi</label>
+				<select id="tahsilat" name="tahsilat">
+					<option value="bir">Peşin</option>
+					<option value="iki">1-30 Gün</option>
+					<option value="uc">31-60 Gün</option>
+					<option value="dort">61-90 Gün</option>
+					<option value="bes">91-120 Gün</option>
+					<option value="alti">121-150 Gün</option>
+				</select>
+				<br><br>
+				<input type="button" value="Hesapla" onclick="hesapla()">
+				<br><br><br>
+				<label for="sonuc">Kar</label>
+				<input type="text" id="sonuc" name="sonuc" placeholder="Kar"><br>
+			</form>
+			<form action="home.htm"><input type="submit" value="Sayfayı sıfırla"></form>
+		</div>
+		<div class="col-sm-3"></div>
+	</div>
+	<br>
+</body>
+
+</html>
